@@ -1,0 +1,35 @@
+# Alice's aliases
+function alicerun() {
+    ./"$1.bin" < "$1_input.txt" > "$1_output.txt"
+}
+
+function alicecpp() {
+    g++ -DAlice -z stack-size=268435456 -O2 -std=c++23 -o "$1.bin" "$1.cpp" && echo "" && echo "" && echo "Successfully compiling $1.cpp into $1.bin" && alicerun $1
+}
+
+function alicecpp_diagnostics() {
+    g++ -Wall -Wextra -Wconversion -DAlice -Wl,-z stack-size=268435456 -O2 -fsanitize=undefined -std=c++23 -o "$1.bin" "$1.cpp" && echo "" && echo "" && echo "Successfully compiling $1.cpp into $1.bin (diagnostics protocol)" && alicerun $1
+}
+
+function prepare() {
+    touch "$1_input.txt" "$1_output.txt" && cp "/home/alice/competitive/__templates/template.cpp" "$1.cpp"
+}
+
+function call_templates() {
+    cp -r "/home/alice/competitive/__templates/" "templates/"
+}
+
+function bulk_prepare() {
+    for x in {A..Z}
+    do
+        if [ ! "$x" \> "$1" ];
+        then prepare "$x"; fi
+    done
+}
+
+function arg_prepare() {
+    for x
+    do
+        prepare "$x"
+    done
+}
