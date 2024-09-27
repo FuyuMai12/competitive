@@ -2,7 +2,7 @@
 // Powered by Alice Engine, credited to FuyuMai12.
 
 /******************************************** [  APPENDIXES  ] *********************************************/
-#pragma GCC optimize("O3")
+#pragma GCC optimize("O3,inline")
 
 #include <bits/stdc++.h>
 using namespace std;
