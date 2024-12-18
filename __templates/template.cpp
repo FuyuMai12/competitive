@@ -36,7 +36,7 @@ namespace solution {
     // A lament rain, washing away the sorrow and regrets.
     // Farewell, "Celia".
 
-
+    
     
     void Preprocess() {
         
@@ -80,7 +80,8 @@ template <typename T> void read2d(vector<vector<T>> &vec, int dim1, int dim2) {
 }
 
 template <typename T> void write1d(vector<T> &vec) {
-    for (auto &z: vec) cout << z << " "; cout << endl;
+    for (auto &z: vec) cout << z << " ";
+    cout << endl;
 }
 
 template <typename T> void write2d(vector<vector<T>> &vec) {
@@ -105,3 +106,9 @@ template <typename T> void readwadj(vector<vector<pair<int, T>>> &adj, int verte
         adj[v].emplace_back(make_pair(u, w));
     }
 }
+
+/*
+    "I cannot promise a good outcome..."
+    "And I know that. But what could I do in this conundrum either?
+     Also, you are so stubborn of a girl... it's hard for me to even counter-argue."
+*/

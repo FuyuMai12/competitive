@@ -4,3 +4,4 @@
 !.gitignore
 
 !__templates/**
+__templates/.vscode
