@@ -56,6 +56,10 @@ namespace solution {
 int main(int argc, char* argv[]) {
     ios_base::sync_with_stdio(false);
     if (!solution::interactive) cin.tie(NULL);
+
+    #ifdef Alice
+    solution::interactive *= -1;
+    #endif
     
     solution::Preprocess();
     
